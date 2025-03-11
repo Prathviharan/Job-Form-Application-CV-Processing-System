@@ -11,7 +11,7 @@ This is a **MERN stack** application that automates **job application processing
 - **Webhook**: Axios (Sends processed data to external API)
 - **Email Automation**: Nodemailer (Gmail SMTP)
 - **Google Sheets API**: Stores extracted CV data
-- **Deployment**: Azure App Services & Netlify
+- **Deployment**: Azure App Services
 - 
 ---
 
@@ -88,25 +88,9 @@ npm start
 
 ## Deployment
 
-### **1️. Deploy Backend (Azure App Services)**
-
-```sh
-az webapp up --name job-application-backend --resource-group myResourceGroup --sku B1 --location EastUS
-```
-
-### **2️. Deploy Frontend (Netlify)**
-
-1. **Build the frontend**:
-   ```sh
-   cd frontend
-   npm run build
-   ```
-2. **Deploy to Netlify**:
-   - Go to [Netlify](https://www.netlify.com/)
-   - Click **New site from Git**
-   - Select your repository and deploy the `frontend/build` folder
-
----
+### **1️. Deploy Azure App Services**
+- select static web app & deploy the application using github repository
+- delpoymemt URL - https://agreeable-forest-00051db0f.6.azurestaticapps.net/
 
 ## Testing & Debugging
 
