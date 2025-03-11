@@ -129,28 +129,3 @@ az webapp up --name job-application-backend --resource-group myResourceGroup --s
 
 - **Name** - Prathiharan
 
-graph TD;
-    A[User submits Job Application] -->|Form Data| B[React Frontend (Netlify)];
-    B -->|API Request| C[Express Backend (Netlify Functions)];
-    
-    C -->|Store CV| D[Azure Blob Storage];
-    C -->|Save Data| E[MongoDB Atlas];
-    C -->|Extract Data| F[pdf-parse (CV Processing)];
-    
-    F -->|Save Structured Data| G[Google Sheets API];
-    C -->|Send Webhook| H[External Webhook API];
-    
-    C -->|Schedule Email| I[Nodemailer (Gmail SMTP)];
-    I -->|Follow-up Email| J[Applicant];
-
-    style A fill:#f4b400,stroke:#333,stroke-width:2px;
-    style B fill:#4285f4,stroke:#fff,stroke-width:2px;
-    style C fill:#34a853,stroke:#fff,stroke-width:2px;
-    style D fill:#fbbc05,stroke:#333,stroke-width:2px;
-    style E fill:#ea4335,stroke:#fff,stroke-width:2px;
-    style F fill:#0f9d58,stroke:#fff,stroke-width:2px;
-    style G fill:#ff6d00,stroke:#fff,stroke-width:2px;
-    style H fill:#a142f4,stroke:#fff,stroke-width:2px;
-    style I fill:#f4b400,stroke:#333,stroke-width:2px;
-    style J fill:#34a853,stroke:#fff,stroke-width:2px;
-
